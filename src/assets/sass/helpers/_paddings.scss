@@ -1,0 +1,35 @@
+@use '../utilities' as *;
+
+$paddings: 50; // insert value to create margin-[top, right, bottom, left] HERE
+
+@for $padding from 1 through $paddings {
+  .p-#{$padding} {
+    padding: rem($padding);
+  }
+
+  .pt-#{$padding} {
+    padding-block-start: rem($padding); // Padding Top
+  }
+
+  .pb-#{$padding} {
+    padding-block-end: rem($padding); // Padding Bottom
+  }
+
+  .pl-#{$padding} {
+    padding-inline-start: rem($padding); // Padding Left
+  }
+
+  .pr-#{$padding} {
+    padding-inline-end: rem($padding); // Padding Right
+  }
+
+  .px-#{$padding} {
+    padding-inline: rem($padding); // Padding Left and Right
+  }
+
+  .py-#{$padding} {
+    padding-block: rem($padding); // Padding Top and Bottom
+  }
+}
+
+/*Output will be: Ex pt-5, pr-5, pl-5, pb-5*/

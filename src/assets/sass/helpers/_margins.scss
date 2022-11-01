@@ -1,0 +1,35 @@
+@use '../utilities' as *;
+
+$margins: 50; // insert max-value to create margin-[top, right, bottom, left] HERE
+
+@for $margin from 1 through $margins {
+  .m-#{$margin} {
+    margin: rem($margin);
+  }
+  .mt-#{$margin} {
+    margin-block-start: rem($margin); // Margin Top
+  }
+  .mb-#{$margin} {
+    margin-block-end: rem($margin); // Margin Bottom
+  }
+  .ml-#{$margin} {
+    margin-inline-start: rem($margin); // Margin Left
+  }
+  .mr-#{$margin} {
+    margin-inline-end: rem($margin); // Margin Right
+  }
+
+  .mx-#{$margin} {
+    margin-inline: rem($margin); // Margin Left and Right
+  }
+
+  .my-#{$margin} {
+    margin-block: rem($margin); // Margin Top and Bottom
+  }
+}
+
+.m-auto {
+  margin-inline: auto; // Margin Left and Right
+}
+
+/*Output will be: Ex mt-5, mr-5, ml-5, mb-5*/

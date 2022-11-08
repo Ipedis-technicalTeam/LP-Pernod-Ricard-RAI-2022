@@ -1,9 +1,163 @@
 <main>
   <!-- MAIN START -->
+
   <section>
     <div class="container">
-      <h2 data-i18n="main.heading"></h2>
+
+<!--      <h2 data-i18n="main.heading"></h2>-->
+
+<!--        change title &#45;&#45;-->
+
+
     </div>
   </section>
+
+  <!-- SECTION SLIDER  -->
+  <section>
+
+        <!-- PANEL 1 -->
+        <div class="ip-panel panel" >
+
+            <div class="panel__desc">
+                <h3 class="panel__desc__title">
+                    Au service<br/> de nos<br/> <span>collaborateurs</span>
+                </h3>
+            </div>
+            <div class="panel__items">
+                <ul class="panel__items__ul">
+                    <li class="panel__li">
+                        <a class='panel__li__link' href="#">
+                            <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-1/slide-1.png');"></div>
+                            <span class='panel__li__overlay'></span>
+                            <span class='panel__li__desc'>Renforcer l'engagement collectif avec I say 2.0</span>
+                        </a>
+                    </li>
+                    <li class="panel__li">
+                        <a class='panel__li__link' href="#">
+                            <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-1/slide-2.png');"></div>
+                            <span class='panel__li__overlay'></span>
+                            <span class='panel__li__desc'>Préparer nos collaborateurs pour l'avenir</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SLIDER MOBILE 1 -->
+        <div class="slider-mobile">
+            <ip-slider-sl-1
+                    slide-title='Au service<br/> de nos<br/> <span>collaborateurs</span>'
+                    slide-title-mobile='Au service de <br/>nos <span>collaborateurs</span>',
+                    slides='[
+                {"imgPath": "../assets/images/slider/slide-1/slide-1.png", "link": "#", "title": "Renforcer l&apos;engagement collectif avec I say 2.0"},
+                {"imgPath": "../assets/images/slider/slide-1/slide-2.png", "link": "#", "title": "Préparer nos collaborateurs pour l&apos;avenir"}
+            ]'>
+            </ip-slider-sl-1>
+        </div>
+
+        <!-- PANEL 2 -->
+        <div class="ip-panel panel panel-reverse">
+
+            <div class="panel__desc">
+                <h3 class="panel__desc__title">
+                    Au service<br/> <span>de la planète</span>
+                </h3>
+            </div>
+            <div class="panel__items">
+                <ul class="panel__items__ul">
+                    <li class="panel__li">
+                        <a class='panel__li__link' href="#">
+                            <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-2/slide-1.png');"></div>
+                            <span class='panel__li__overlay'></span>
+                            <span class='panel__li__desc'>Préserver nos terroirs en prenant soin de nos racines</span>
+                        </a>
+                    </li>
+                    <li class="panel__li">
+                        <a class='panel__li__link' href="#">
+                            <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-2/slide-2.png');"></div>
+                            <span class='panel__li__overlay'></span>
+                            <span class='panel__li__desc'>Investir dans un avenir plus circulaire</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SLIDER MOBILE 2 -->
+        <div class="slider-mobile">
+              <!-- Slider Desktop -->
+              <ip-slider-sl-1
+                      slide-title='Au service<br/> <span>de la planète</span>'
+                      slide-title-mobile='Au service de <br/><span>la planète</span>',
+                      slides='[
+                    {"imgPath": "../assets/images/slider/slide-2/slide-1.png", "link": "#", "title": "Préserver nos terroirs en prenant soin de nos racines"},
+                    {"imgPath": "../assets/images/slider/slide-2/slide-2.png", "link": "#", "title": "Investir dans un avenir plus circulaire"}
+                ]'>
+              </ip-slider-sl-1>
+          </div>
+
+        <!-- Slider Desktop -->
+        <div class="slider-desktop">
+            <ip-slider-sl-1
+                    slide-title='Au service<br/> de nos <br/><span>consommateurs</span>'
+                    slide-title-mobile='Au service de<br/><span>nos consommateurs</span>',
+                    slides='[
+                {"imgPath": "../assets/images/slider/slide-3/slide-1.png", "link": "#", "title": "Martell prend son envol au Nigeria"},
+                {"imgPath": "../assets/images/slider/slide-3/slide-2.png", "link": "#", "title": "Pour une croissance de nos marques de Whiskey aux États-Unis"},
+                {"imgPath": "../assets/images/slider/slide-3/slide-3.png", "link": "#", "title": "Un apéritif, mais pas que"},
+                {"imgPath": "../assets/images/slider/slide-3/slide-4.png", "link": "#", "title": "Un amour Absolu[t]"},
+                {"imgPath": "../assets/images/slider/slide-3/slide-5.png", "link": "#", "title": "Le digital au service de la consommation responsable"}
+            ]'>
+            </ip-slider-sl-1>
+        </div>
+
+        <!-- PANEL 3 -->
+        <div class="ip-panel panel panel-reverse">
+
+          <div class="panel__desc">
+              <h3 class="panel__desc__title">
+                  Au service<br/> <span>de l'art</span>
+              </h3>
+          </div>
+          <div class="panel__items">
+              <ul class="panel__items__ul">
+                  <li class="panel__li">
+                      <a class='panel__li__link' href="#">
+                          <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-4/slide-1.png');"></div>
+                          <span class='panel__li__overlay'></span>
+                          <span class='panel__li__desc'>Le programme de mentorat artistique</span>
+                      </a>
+                  </li>
+                  <li class="panel__li">
+                      <a class='panel__li__link' href="#">
+                          <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slider/slide-4/slide-2.png');"></div>
+                          <span class='panel__li__overlay'></span>
+                          <span class='panel__li__desc'>La Fondation d'entreprise Pernod Ricard</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+
+      </div>
+
+        <!-- SLIDER MOBILE 3 -->
+        <div class="slider-mobile">
+          <!-- Slider Desktop -->
+          <ip-slider-sl-1
+                  slide-title='Au service<br/> <span>de l&apos;art</span>>'
+                  slide-title-mobile='Au service<br/> <span>de l&apos;art</span>',
+                  slides='[
+                    {"imgPath": "../assets/images/slider/slide-4/slide-1.png", "link": "#", "title": "Le programme de mentorat artistique"},
+                    {"imgPath": "../assets/images/slider/slide-4/slide-2.png", "link": "#", "title": "La Fondation d&apos;entreprise Pernod Ricard"}
+                ]'>
+          </ip-slider-sl-1>
+      </div>
+
+    </section>
+
   <!-- MAIN END -->
 </main>
+
+

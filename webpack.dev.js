@@ -47,7 +47,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "./src/index.html"),
       filename: "index.html",
-      title: "Development",
+      title: "Pernod Ricard",
       lang: "fr", // To Change lang for dev mode
     }),
 

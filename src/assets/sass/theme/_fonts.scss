@@ -22,6 +22,25 @@
   font-style: normal;
 }
 
+@font-face {
+  src: url("../fonts/Graphik-Light.woff") format("woff");
+
+  font-family: "Graphik-Light";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/Choplin-Medium.woff") format("woff");
+
+  font-family: "Choplin-Medium";
+  font-weight: normal;
+  font-style: normal;
+}
+
 $primaryFontRegular: "Roboto-Regular", sans-serif;
 $primaryFontMedium: "Roboto-Medium", sans-serif;
 $primaryFontBold: "Roboto-Bold", sans-serif;
+
+$Graphik-Light: "Graphik-Light", sans-serif;
+$Choplin-Medium: "Choplin-Medium", sans-serif;

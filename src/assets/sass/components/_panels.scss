@@ -3,10 +3,17 @@
 
 
 ip-slider-sl-1 {
-  --ip-slider-secondary-color: #f79c81;
+  --ip-slider-secondary-color: #AA423E;
   --ip-slider-font-primary: #{$Graphik-Light};
   --ip-slider-font-secondary: #{$Choplin-Medium};
 }
+
+.slider-desktop {
+  ip-slider-sl-1::part(slider-image-2) {
+    background-position: bottom;
+  }
+}
+
 
 .slider-mobile {
   display: none;
@@ -43,14 +50,10 @@ ip-slider-sl-1 {
 
     &__title {
       text-align: start;
-      padding-left: 5vw;
-      font-size: 50px;
+      padding-left: 10vw;
+      font-size: 3vw;
       font-family: $Graphik-Light;
       color: $tertiaryColor;
-
-      @media only screen and (max-width: 1325px) {
-        font-size: 40px;
-      }
 
       @media #{$ps-tablet} {
         font-size: 30px;
@@ -112,8 +115,8 @@ ip-slider-sl-1 {
         position: absolute;
         color: white;
         padding: 0 20%;
-        font-family: var(--ip-acc-font);
-        font-size: 35px;
+        font-family: $Choplin-Medium;
+        font-size: 2.5vw;
         opacity: 0;
         transform: translateY(25px);
         transition: opacity 0.3s ease-in, transform 0.3s ease-in;
@@ -123,11 +126,6 @@ ip-slider-sl-1 {
           opacity: 1;
           transform: translateY(0px);
           padding: 0 10%;
-          font-size: 30px;
-        }
-
-        @media #{$ps-small-tablet} {
-          font-size: 25px;
         }
 
         @media #{$ps-ipad-pro-landscape} {
@@ -136,8 +134,8 @@ ip-slider-sl-1 {
         }
 
         @media #{$ps-mobile-portrait} {
-          font-size: 28px;
-          padding: 0 12% 0 0;
+          font-size: 25px;
+          padding: 0 15% 0 0;
           left: 12%;
           bottom: 12%;
         }

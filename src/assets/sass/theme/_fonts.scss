@@ -1,33 +1,37 @@
 @font-face {
-  src: url("../fonts/Roboto-Regular.woff") format("woff");
-
-  font-family: "Roboto-Regular";
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  src: url("../fonts/Roboto-Medium.woff") format("woff");
-
-  font-family: "Roboto-Medium";
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  src: url("../fonts/Roboto-Bold.woff") format("woff");
-
-  font-family: "Roboto-Bold";
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   src: url("../fonts/Graphik-Light.woff") format("woff");
 
   font-family: "Graphik-Light";
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Graphik-Regular.woff") format("woff");
+
+  font-family: "Graphik-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Graphik-Medium.woff") format("woff");
+
+  font-family: "Graphik-Medium";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Graphik-Bold.woff") format("woff");
+
+  font-family: "Graphik-Bold";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,11 +40,21 @@
   font-family: "Choplin-Medium";
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-$primaryFontRegular: "Roboto-Regular", sans-serif;
-$primaryFontMedium: "Roboto-Medium", sans-serif;
-$primaryFontBold: "Roboto-Bold", sans-serif;
+@font-face {
+  src: url("../fonts/Choplin-SemiBold.woff") format("woff");
+
+  font-family: "Choplin-SemiBold";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 $Graphik-Light: "Graphik-Light", sans-serif;
+$Graphik-Regular: "Graphik-Regular", sans-serif;
+$Graphik-Medium: "Graphik-Medium", sans-serif;
+$Graphik-Bold: "Graphik-Bold", sans-serif;
 $Choplin-Medium: "Choplin-Medium", sans-serif;
+$Choplin-SemiBold: "Choplin-SemiBold", sans-serif;

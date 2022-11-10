@@ -1,0 +1,32 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.focus {
+    .container {
+        padding-left: calc(10vw + 40px);
+        padding-right: calc(10vw + 40px);
+
+        .title {
+            color: $secondaryColor;
+            font-size: 50px;
+            padding-bottom: 150px;
+
+            .light {
+                font-family: $Graphik-Light;
+                display: block;
+            }
+        }
+
+        .focus__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 70px;
+
+            &__item {
+                min-height: 530px;
+                background-color: #224254;
+            }
+        }
+    }
+}

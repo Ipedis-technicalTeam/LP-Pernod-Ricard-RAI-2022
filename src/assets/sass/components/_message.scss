@@ -1,0 +1,105 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.message {
+    margin-bottom: 150px;
+    .container {
+        padding-left: 10vw;
+        display: flex;
+
+        .heading {
+            width: 33.33%;
+            padding-right: 65px;
+            .title {
+                color: $black;
+                font-size: 80px;
+                line-height: 1.0;
+                font-family: $Choplin-SemiBold;
+                padding-bottom: 100px;
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+            }
+
+            .role {
+                color: $black;
+                text-align: right;
+                font-size: 20px;
+                font-family: $Graphik-Regular;
+                line-height: 1.1;
+            }
+        }
+
+        .image {
+            padding-top: 200px;
+            padding-bottom: 100px;
+            padding-right: 100px;
+            width: 33.33%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .quote {
+            width: 33.33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            blockquote {
+                color: $black;
+                font-size: 80px;
+                font-family: $Choplin-SemiBold;
+                margin-bottom: 90px;
+                line-height: 1.1;
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+
+                .underline {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        background: url('..//images/message-underline.svg');
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .readMore {
+                color: $black;
+                text-transform: uppercase;
+                font-family: $Graphik-Medium;
+                font-size: 25px;
+                width: fit-content;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    display: block;
+                    margin-top: 5px;
+                    right: 0;
+                    background: $black;
+                    transition: width .5s ease;
+                    -webkit-transition: width .5s ease;
+                }
+
+                &:hover, &:focus {
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

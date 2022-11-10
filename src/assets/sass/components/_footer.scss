@@ -2,6 +2,100 @@
 @use '../utilities' as *;
 
 footer {
-  background-color: $footerBackgroundColor;
-  color: $footerTextColor;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+
+    .logo {
+      width: 300px;
+      height: auto;
+      margin-bottom: 40px;
+
+      @media #{$ps-mobile} {
+        width: 250px;
+      }
+    }
+
+    .redirect {
+      margin-bottom: 60px;
+      &__list {
+        display: flex;
+        align-items: center;
+
+        @media #{$ps-mobile} {
+          flex-direction: column;
+        }
+
+        &__item {
+          &:nth-child(1) {
+            padding-right: 40px;
+
+            @media #{$ps-mobile} {
+              padding-right: 0;
+              padding-bottom: 40px;
+            }
+          }
+
+          &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 110px;
+            border: 2px solid $lightBlue;
+            color: $lightBlue;
+            font-family: $Graphik-Medium;
+            text-transform: uppercase;
+          }
+
+          .read {
+
+            &:hover, &:focus {
+              color: $lightColor;
+              background-color: $lightBlue;
+            }
+          }
+
+          .download {
+            color: $lightColor;
+            background-color: $lightBlue;
+
+            &:hover, &:focus {
+              color: $lightBlue;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      .doc {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+
+        .eye {
+          width: 20px;
+          height: auto;
+          margin-right: 10px;
+        }
+
+        p {
+          color: $lightBlue;
+        }
+      }
+
+      .ps {
+        &__link {
+          color: $lightBlue;
+        }
+      }
+    }
+  }
 }

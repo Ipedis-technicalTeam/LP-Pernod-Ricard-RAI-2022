@@ -1,0 +1,47 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.world {
+    margin-bottom: 130px;
+    .container {
+        display: flex;
+
+        .left {
+            width: 55vw;
+            margin-top: 115px;
+            background-image: url('..//images/world-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            img {
+                height: 70%;
+            }
+        }
+
+        .right {
+            width: 45vw;
+            background-color: $secondaryColor;
+            margin-bottom: 200px;
+            padding: 160px 80px 100px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .heading {
+                color: $lightColor;
+                font-size: 80px;
+                line-height: 1.1;
+                text-align: left;
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+            }
+        }
+    }
+}

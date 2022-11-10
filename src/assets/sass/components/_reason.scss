@@ -1,0 +1,86 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.reason {
+    margin-bottom: 150px;
+    .container {
+        display: flex;
+
+        .left {
+            width: 35vw;
+            background-color: $primaryColor;
+            margin-bottom: 200px;
+            padding: 160px 80px 100px 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .heading {
+                color: $lightColor;
+                font-size: 80px;
+                line-height: 1.1;
+                text-align: right;
+                padding-bottom: 250px;
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+            }
+
+            &__list {
+                &__item {
+                    text-align: right;
+
+                    &:not(:last-child) {
+                        padding-bottom: 40px;
+                    }
+
+                    &-link {
+                        color: $lightColor;
+                        font-family: $Graphik-Medium;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            display: block;
+                            margin-top: 5px;
+                            right: 0;
+                            background: $lightColor;
+                            transition: width .5s ease;
+                            -webkit-transition: width .5s ease;
+                        }
+        
+                        &:hover, &:focus {
+                            &::after {
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 65vw;
+            margin-top: 115px;
+            background-image: url('..//images/reason-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            img {
+                height: 70%;
+            }
+        }
+    }
+}

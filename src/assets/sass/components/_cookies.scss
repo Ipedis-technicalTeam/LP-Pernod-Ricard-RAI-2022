@@ -50,6 +50,8 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.8s ease-in;
+  --focus-color: #000000;
+
 }
 
 .cookie-btn button:hover {
@@ -77,6 +79,7 @@
   display: block;
   cursor: pointer;
   background: none;
+  --focus-color: #000000;
 }
 
 .close-cookie:before, .close-cookie:after {

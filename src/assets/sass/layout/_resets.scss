@@ -85,8 +85,8 @@ button {
 
   &:focus,
   &:focus-visible {
-    outline-offset: em(5);
-    outline: rem(2) solid var(--focus-color, $darkColor);
+    outline-offset: 2px;
+    outline: 2px solid var(--focus-color, $darkColor);
     transition: all $transition-in-out;
   }
 }

@@ -1,0 +1,88 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+.our-brands {
+  &-mobile {
+    display: none;
+  }
+
+  @include mq($ps-mobile) {
+    display: none;
+
+    &-mobile {
+      display: block;
+    }
+  }
+}
+
+.our-brands,
+.our-brands-mobile {
+  margin-block: rem(60);
+
+  .container {
+    a {
+      position: relative;
+      inline-size: 100%;
+      block-size: 100%;
+
+      img {
+        position: absolute;
+        inset: 0;
+        block-size: 100%;
+        inline-size: auto;
+        max-block-size: 100%;
+        max-inline-size: 100%;
+        object-fit: contain;
+
+        &:nth-child(1) {
+          animation-delay: 1.5s;
+          z-index: 2;
+        }
+
+        &:nth-child(2) {
+          animation-delay: 0.8s;
+          z-index: 1;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.3s;
+          z-index: 0;
+        }
+
+        &:last-child {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+.animate-slide-in {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  animation: slideIn 1s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

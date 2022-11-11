@@ -1,7 +1,157 @@
 @use '../theme' as *;
 @use '../utilities' as *;
 
+main {
+  @media #{$ps-tablet} {
+      overflow-x: hidden;
+  }
+}
+
 header {
-  background-color: $headerBackgroundColor;
-  color: $headerTextColor;
+  margin-bottom: 100px;
+
+  @media #{$ps-tablet} {
+    margin-bottom: 80px;
+  }
+
+  @media #{$ps-mobile} {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    width: 100%;
+    background-image: url("..//images/header-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    position: relative;
+
+    @media only screen and (min-width: 1366px) {
+      min-height: 900px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      min-height: auto;
+      padding-bottom: 140px;
+    }
+
+    @media only screen and (min-width: 1645px) {
+      min-height: auto;
+      padding-bottom: 180px;
+    }
+
+    @media only screen and (min-width: 1645px) {
+      min-height: 1200px;
+    }
+
+    @media #{$ps-tablet} {
+      min-height: auto;
+      padding-top: 0;
+      padding-bottom: 35px;
+    }
+
+    @media #{$ps-tablet-landscape} {
+      padding-bottom: 120px;
+    }
+
+    @media #{$ps-mobile} {
+      min-height: 400px;
+      justify-content: flex-end;
+      padding-bottom: 0;
+    }
+
+    .headerHeadline {
+      background-color: $primaryColor;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 140px 50px 70px 10vw;
+      width: 60vw;
+      margin-top: 100px;
+      height: fit-content;
+
+      @media #{$ps-tablet} {
+        width: 55vw;
+        padding: 70px 35px 40px 3vw;
+        margin-top: 0;
+      }
+
+      @media #{$ps-mobile} {
+        padding: 40px 30px 40px 3vw;
+        position: absolute;
+        left: 0;
+        top: -40px;
+      }
+
+
+      h1 {
+        color: $lightColor;
+        font-family: $Choplin-SemiBold;
+        font-size: 4vw;
+        line-height: 1.1;
+        padding-bottom: 100px;
+
+        @media #{$ps-tablet} {
+          font-size: 5vw;
+          padding-bottom: 60px;
+        }
+
+        @media #{$ps-mobile} {
+          font-size: 25px;
+        }
+
+        .font-regular {
+          font-family: $Graphik-Regular;
+          font-weight: 400;
+        }
+      }
+
+      h2 {
+        font-family: $Graphik-Regular;
+        color: $lightColor;
+        text-transform: uppercase;
+        font-size: 1.5625rem;
+        letter-spacing: 2px;
+
+        @media #{$ps-tablet} {
+          font-size: 1.25rem;
+        }
+
+        @media #{$ps-mobile} {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    .headerPicture {
+      width: 40vw;
+      position: relative;
+      display: flex;
+
+      @media #{$ps-tablet} {
+        width: 45vw;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 200px;
+
+        @media #{$ps-tablet} {
+          top: 150px;
+        }
+
+        @media #{$ps-mobile} {
+          top: unset;
+          bottom: 0;
+        }
+        
+      }
+    }
+  }
 }

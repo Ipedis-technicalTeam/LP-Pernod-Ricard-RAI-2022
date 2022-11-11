@@ -1,0 +1,52 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.culture {
+    background-image: url('..//images/culture-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 210px;
+
+    .container {
+        position: relative;
+        min-height: 990px;
+
+        .left {
+            width: 40vw;
+            min-height: 880px;
+            background-color: $tertiaryColor;
+            padding-top: 150px;
+            padding-right: 80px;
+            padding-left: calc(10vw + 40px);
+            position: absolute;
+            left: 0;
+            top: 200px;
+
+
+            .heading {
+                color: $lightColor;
+                font-family: $Choplin-SemiBold;
+                font-size: 80px;
+                line-height: 1.1;
+                text-align: right;
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+            }
+        }
+
+        .right {
+            width: 30vw;
+            position: absolute;
+            right: 0;
+            top: -230px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,7 +1,92 @@
 @use '../theme' as *;
 @use '../utilities' as *;
 
-nav {
-  background-color: $navBackgroundColor;
-  color: $navTextColor;
+.nav {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 35px 0;
+
+    .logo {
+      width: 300px;
+      height: auto;
+
+      @media #{$ps-mobile} {
+        width: 250px;
+      }
+    }
+
+    .language {
+      position: absolute;
+      right: 5%;
+
+      @media #{$ps-mobile} {
+        font-size: 12px;
+      }
+
+      &__list {
+        display: flex;
+        align-items: center;
+
+        &__item {
+          font-family: $Graphik-Regular;
+
+          &__link {
+            color: $primaryColor;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 2px;
+              display: block;
+              margin-top: 0;
+              right: 0;
+              background: $primaryColor;
+              transition: width .5s ease;
+              -webkit-transition: width .5s ease;
+            }
+  
+            &:hover, &:focus {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+          }
+        }
+
+        .current {
+          color: $primaryColor;
+          position: relative;
+          padding-right: 15px;
+          margin-right: 15px;
+          border-right: 1px solid $lightBlue;
+
+          @media #{$ps-mobile} {
+            padding-right: 5px;
+            margin-right: 5px;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            background-color: $primaryColor;
+            height: 2px;
+            width: 20px;
+
+            @media #{$ps-mobile} {
+              width: 14px;
+              height: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

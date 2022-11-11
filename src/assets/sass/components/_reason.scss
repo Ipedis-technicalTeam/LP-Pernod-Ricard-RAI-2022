@@ -1,0 +1,158 @@
+@use '../theme' as *;
+@use '../utilities' as *;
+
+.reason {
+    margin-bottom: 150px;
+
+    @media #{$ps-tablet} {
+        margin-bottom: 80px;
+    }
+
+    @media #{$ps-mobile} {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+
+        @media #{$ps-tablet} {
+            background-image: url('..//images/reason-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        @media #{$ps-mobile} {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+
+        .left {
+            width: 35vw;
+            background-color: $primaryColor;
+            margin-bottom: 200px;
+            padding: 160px 80px 100px 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            @media only screen and (min-width: 1280px) and (max-width: 1919px) {
+                padding: 160px 60px 100px 2vw;
+            }
+
+            @media #{$ps-tablet} {
+                width: 50vw;
+                padding: 80px 40px 40px 40px;
+                height: fit-content;
+            }
+
+            @media #{$ps-mobile} {
+                padding: 60px 20px 20px 20px;
+                width: 55vw;
+                margin-top: -20px;
+                margin-bottom: 0;
+            }
+
+            .heading {
+                color: $lightColor;
+                font-family: $Choplin-SemiBold;
+                font-size: clamp(1.825rem, 8vw, 5rem);
+                line-height: 1.1;
+                text-align: right;
+                padding-bottom: 250px;
+
+                @media #{$ps-tablet} {
+                    padding-bottom: 180px;
+                }
+
+                @media #{$ps-mobile} {
+                    padding-bottom: 100px;
+                }
+
+                .light {
+                    font-family: $Graphik-Light;
+                }
+            }
+
+            &__list {
+                &__item {
+                    text-align: right;
+
+                    &:not(:last-child) {
+                        padding-bottom: 40px;
+
+                        @media #{$ps-mobile} {
+                            padding-bottom: 15px;
+                        }
+                    }
+
+                    &-link {
+                        color: $lightColor;
+                        font-family: $Graphik-Medium;
+                        font-size: clamp(0.75rem, 2vw, 1.25rem);
+                        text-transform: uppercase;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            display: block;
+                            margin-top: 5px;
+                            right: 0;
+                            background: $lightColor;
+                            transition: width .5s ease;
+                            -webkit-transition: width .5s ease;
+                        }
+        
+                        &:hover, &:focus {
+                            &::after {
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 65vw;
+            margin-top: 115px;
+            background-image: url('..//images/reason-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            @media #{$ps-tablet} {
+                width: 50vw;
+                background-image: none;
+                margin-top: 0;
+            }
+
+            @media #{$ps-mobile} {
+                width: 45vw;
+            }
+
+            img {
+                height: 70%;
+
+                @media #{$ps-tablet} {
+                    height: 52%;
+                }
+
+                @media #{$ps-mobile} {
+                    height: auto;
+                    width: 90%;
+                    margin-bottom: -40px;
+                }
+            }
+        }
+    }
+}

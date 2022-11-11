@@ -2,7 +2,6 @@
 @use "../utilities" as *;
 
 * {
-  --focus-color: currentColor;
   box-sizing: border-box;
 }
 
@@ -55,6 +54,8 @@ body {
   font-smooth: always;
   font-variant-ligatures: none;
   overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 body,
@@ -85,7 +86,11 @@ button {
   &:focus,
   &:focus-visible {
     outline-offset: em(5);
-    outline: rem(2) solid var(--focus-color);
+    outline: rem(2) solid var(--focus-color, $darkColor);
     transition: all $transition-in-out;
   }
+}
+
+img {
+  display: block;
 }

@@ -1,115 +1,174 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
 
 .focus {
-    margin-bottom: 160px;
-    .container {
-        padding-left: calc(10vw + 40px);
-        padding-right: calc(10vw + 40px);
+  margin-bottom: 160px;
 
-        .title {
-            color: $secondaryColor;
-            font-size: 50px;
-            padding-bottom: 150px;
+  @media #{$ps-tablet} {
+    margin-bottom: 80px;
+  }
 
-            .light {
-                font-family: $Graphik-Light;
-                display: block;
-            }
-        }
+  @media #{$ps-mobile} {
+    margin-bottom: 60px;
+  }
 
-        .focus__list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr;
-            grid-column-gap: 70px;
-            margin-bottom: 115px;
+  .container {
+    padding-left: calc(10vw + 40px);
+    padding-right: calc(10vw + 40px);
 
-            &__item {
-                min-height: 530px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-
-                &:nth-child(1) {
-                    background-image: url('..//images/focus-1.png');
-                }
-
-                &:nth-child(2) {
-                    background-image: url('..//images/focus-2.png');
-                }
-
-                &:nth-child(3) {
-                    background-image: url('..//images/focus-3.png');
-                }
-
-                &-link {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-
-                    .link-overlay {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0);
-                        transition: background-color 0.3s ease-in;
-                    }
-
-                    .link-txt {
-                        position: absolute;
-                        color: white;
-                        padding: 0 20%;
-                        font-family: $Choplin-Medium;
-                        font-size: 35px;
-                        opacity: 0;
-                        transform: translateY(25px);
-                        transition: opacity 0.3s ease-in, transform 0.3s ease-in;
-                        text-decoration: underline;
-                    }
-
-                    &:hover, &:focus {
-                        .link-overlay {
-                            background-color: rgba(0, 0, 0, 0.6);
-                        }
-
-                        .link-txt {
-                            transform: translateY(0);
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        .btm__list {
-            &__item {
-
-                &:not(:last-child) {
-                    padding-bottom: 40px;
-                }
-
-                &-link {
-                    color: $secondaryColor;
-                    font-family: $Graphik-Medium;
-                    font-size: 25px;
-                    text-transform: uppercase;
-                    position: relative;
-                    display: inline;
-                    transition: all 0.5s linear;
-                    background: linear-gradient(to bottom, rgba($secondaryColor, 1) 0%, rgba($secondaryColor, 1) 98%);
-                    background-size: 0px 2px;
-                    background-repeat: no-repeat;
-                    background-position: left 100%;
-    
-                    &:hover, &:focus {
-                        background-size: 100% 2px;
-                    }
-                }
-            }
-        }
+    @media #{$ps-tablet} {
+      padding: 0 3vw;
     }
+
+    .title {
+      color: $secondaryColor;
+      font-size: clamp(1.825rem, 5vw, 3.125rem);
+      padding-bottom: 150px;
+
+      @media #{$ps-tablet} {
+        padding-bottom: 80px;
+      }
+
+      @media #{$ps-mobile} {
+        padding-bottom: 60px;
+      }
+
+      .light {
+        font-family: $Graphik-Light;
+        display: block;
+      }
+    }
+
+    .focus__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 70px;
+      margin-bottom: 115px;
+
+      @media #{$ps-tablet} {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 40px;
+        margin-bottom: 80px;
+      }
+
+      @media #{$ps-mobile} {
+        margin-bottom: 60px;
+      }
+
+      &__item {
+        min-height: 530px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @media #{$ps-tablet} {
+          min-height: 400px;
+        }
+
+        @media #{$ps-mobile} {
+          min-height: 235px;
+        }
+
+        &:nth-child(1) {
+          background-image: url("..//images/focus-1.png");
+        }
+
+        &:nth-child(2) {
+          background-image: url("..//images/focus-2.png");
+        }
+
+        &:nth-child(3) {
+          background-image: url("..//images/focus-3.png");
+
+          @media #{$ps-tablet} {
+            background-position: top center;
+          }
+        }
+
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .link-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.3s ease-in;
+
+            @media #{$ps-tablet} {
+              background-color: rgba(0, 0, 0, 0.6);
+            }
+          }
+
+          .link-txt {
+            position: absolute;
+            color: white;
+            padding: 0 20%;
+            font-family: $Choplin-Medium;
+            font-size: 35px;
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+            text-decoration: underline;
+
+            @media #{$ps-tablet} {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
+          &:hover,
+          &:focus {
+            .link-overlay {
+              background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            .link-txt {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .btm__list {
+      &__item {
+        &:not(:last-child) {
+          padding-bottom: 40px;
+        }
+
+        &-link {
+          color: $secondaryColor;
+          font-family: $Graphik-Medium;
+          font-size: clamp(1rem, 3vw, 1.5625rem);
+          text-transform: uppercase;
+          position: relative;
+          display: inline;
+          transition: all 0.5s linear;
+          background: linear-gradient(
+            to bottom,
+            rgba($secondaryColor, 1) 0%,
+            rgba($secondaryColor, 1) 98%
+          );
+          background-size: 0px 2px;
+          background-repeat: no-repeat;
+          background-position: left 100%;
+
+          &:hover,
+          &:focus {
+            background-size: 100% 2px;
+          }
+        }
+      }
+    }
+  }
 }

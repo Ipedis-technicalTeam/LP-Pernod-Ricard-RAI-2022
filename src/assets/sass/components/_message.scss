@@ -1,188 +1,189 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
 
 .message {
-    margin-bottom: 150px;
+  margin-bottom: 150px;
+
+  @media #{$ps-tablet} {
+    margin-bottom: 80px;
+  }
+
+  @media #{$ps-mobile} {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    padding-left: 10vw;
+    display: flex;
 
     @media #{$ps-tablet} {
-        margin-bottom: 80px;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      flex-direction: column;
     }
 
-    @media #{$ps-mobile} {
-        margin-bottom: 30px;
-    }
+    .heading {
+      width: 33.33%;
+      padding-right: 65px;
 
-    .container {
-        padding-left: 10vw;
-        display: flex;
+      @media #{$ps-tablet} {
+        width: 100%;
+      }
+
+      .title {
+        color: $black;
+        font-size: 80px;
+        font-size: clamp(1.85rem, 7vw, 4rem);
+        line-height: 1;
+        font-family: $Choplin-SemiBold;
+        padding-bottom: 100px;
 
         @media #{$ps-tablet} {
-            padding-left: 3vw;
-            padding-right: 3vw;
-            flex-direction: column;
+          padding-bottom: 80px;
         }
 
-        .heading {
-            width: 33.33%;
-            padding-right: 65px;
-
-            @media #{$ps-tablet} {
-                width: 100%;
-            }
-
-            .title {
-                color: $black;
-                font-size: 80px;
-                font-size: clamp(1.85rem, 7vw, 4rem);
-                line-height: 1.0;
-                font-family: $Choplin-SemiBold;
-                padding-bottom: 100px;
-
-                @media #{$ps-tablet} {
-                    padding-bottom: 80px;
-                }
-
-                @media #{$ps-mobile} {
-                    padding-bottom: 40px;
-                }
-
-                .light {
-                    font-family: $Graphik-Light;
-                    font-weight: 400;
-                }
-            }
-
-            .role {
-                color: $black;
-                text-align: right;
-                font-size: 20px;
-                font-family: $Graphik-Regular;
-                line-height: 1.1;
-
-                @media #{$ps-tablet} {
-                    display: none;
-                }
-            }
+        @media #{$ps-mobile} {
+          padding-bottom: 40px;
         }
 
-        .image {
-            padding-top: 200px;
-            padding-bottom: 100px;
-            padding-right: 100px;
-            width: 33.33%;
-
-            .role {
-                display: none;
-                color: $black;
-                text-align: right;
-                font-size: clamp(1.125rem, 4vw, 1.5rem);
-                font-family: $Graphik-Regular;
-                line-height: 1.1;
-                width: 20%;
-                margin-right: 60px;
-            }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-            @media #{$ps-tablet} {
-                padding: 0;
-                width: 100%;
-                display: flex;
-                margin-bottom: 40px;
-
-                .role {
-                    display: block;
-                }
-
-                img {
-                    width: 50%;
-                }
-            }
-
-            @media #{$ps-mobile} {
-                margin-bottom: 20px;
-
-                .role {
-                    margin-right: 30px;
-                }
-            }
+        .light {
+          font-family: $Graphik-Light;
+          font-weight: 400;
         }
+      }
 
-        .quote {
-            width: 33.33%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+      .role {
+        color: $black;
+        text-align: right;
+        font-size: 20px;
+        font-family: $Graphik-Regular;
+        line-height: 1.1;
 
-            @media #{$ps-tablet} {
-                width: 100%;
-                align-items: flex-end;
-            }
-
-            .content {
-                @media #{$ps-tablet} {
-                    width: 60%;
-                }
-
-                blockquote {
-                    color: $black;
-                    font-size: clamp(1.85rem, 5vw, 4.375rem);
-                    font-family: $Choplin-SemiBold;
-                    margin-bottom: 90px;
-                    line-height: 1.1;
-
-                    @media #{$ps-tablet} {
-                        margin-bottom: 60px;
-                    }
-
-                    @media #{$ps-mobile} {
-                        margin-bottom: 40px;
-                    }
-    
-                    .light {
-                        font-family: $Graphik-Light;
-                    }
-    
-                    .underline {
-                        position: relative;
-                        text-decoration: underline;
-                    }
-                }
-    
-                .readMore {
-                    color: $black;
-                    text-transform: uppercase;
-                    font-family: $Graphik-Medium;
-                    font-size: 25px;
-
-                    font-size: clamp(1.125rem, 3vw, 1.5625rem);
-                    width: fit-content;
-                    position: relative;
-    
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        display: block;
-                        margin-top: 5px;
-                        right: 0;
-                        background: $black;
-                        transition: width .5s ease;
-                        -webkit-transition: width .5s ease;
-                    }
-    
-                    &:hover, &:focus {
-                        &::after {
-                            width: 100%;
-                            left: 0;
-                        }
-                    }
-                }
-            }
+        @media #{$ps-tablet} {
+          display: none;
         }
+      }
     }
+
+    .image {
+      padding-top: 200px;
+      padding-bottom: 100px;
+      padding-right: 100px;
+      width: 33.33%;
+
+      .role {
+        display: none;
+        color: $black;
+        text-align: right;
+        font-size: clamp(1.125rem, 4vw, 1.5rem);
+        font-family: $Graphik-Regular;
+        line-height: 1.1;
+        width: 20%;
+        margin-right: 60px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media #{$ps-tablet} {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        margin-bottom: 40px;
+
+        .role {
+          display: block;
+        }
+
+        img {
+          width: 50%;
+        }
+      }
+
+      @media #{$ps-mobile} {
+        margin-bottom: 20px;
+
+        .role {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .quote {
+      width: 33.33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      @media #{$ps-tablet} {
+        width: 100%;
+        align-items: flex-end;
+      }
+
+      .content {
+        @media #{$ps-tablet} {
+          width: 60%;
+        }
+
+        blockquote {
+          color: $black;
+          font-size: clamp(1.85rem, 5vw, 4.375rem);
+          font-family: $Choplin-SemiBold;
+          margin-bottom: 90px;
+          line-height: 1.1;
+
+          @media #{$ps-tablet} {
+            margin-bottom: 60px;
+          }
+
+          @media #{$ps-mobile} {
+            margin-bottom: 20px;
+          }
+
+          .light {
+            font-family: $Graphik-Light;
+          }
+
+          .underline {
+            position: relative;
+            text-decoration: underline;
+          }
+        }
+
+        .readMore {
+          color: $black;
+          text-transform: uppercase;
+          font-family: $Graphik-Medium;
+          font-size: 25px;
+
+          font-size: clamp(1.125rem, 3vw, 1.5625rem);
+          width: fit-content;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: $black;
+            transition: width 0.5s ease;
+            -webkit-transition: width 0.5s ease;
+          }
+
+          &:hover,
+          &:focus {
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

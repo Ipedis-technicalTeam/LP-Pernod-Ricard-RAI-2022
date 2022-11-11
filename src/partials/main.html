@@ -19,21 +19,21 @@
         <div class="ip-panel panel" >
 
             <div class="panel__desc">
-                <h3 class="panel__desc__title">
-                    Au service<br/> de nos<br/> <span>collaborateurs</span>
+                <h3 class="panel__desc__title" aria-hidden="true" data-i18n="slider.slide-1.title">
                 </h3>
+                <span class="sr-only" data-i18n="slider.slide-1.title-aria"></span>
             </div>
             <div class="panel__items">
                 <ul class="panel__items__ul">
                     <li class="panel__li">
-                        <a class='panel__li__link' href="#">
+                        <a class='panel__li__link' href="#" aria-label="Renforcer l'engagement collectif avec I say 2.0">
                             <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-1-1.png');"></div>
                             <span class='panel__li__overlay'></span>
                             <span class='panel__li__desc'>Renforcer l'engagement collectif avec I say 2.0</span>
                         </a>
                     </li>
                     <li class="panel__li">
-                        <a class='panel__li__link' href="#">
+                        <a class='panel__li__link' href="#" aria-label="Préparer nos collaborateurs pour l'avenir">
                             <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-1-2.png');"></div>
                             <span class='panel__li__overlay'></span>
                             <span class='panel__li__desc'>Préparer nos collaborateurs pour l'avenir</span>
@@ -47,12 +47,14 @@
         <!-- SLIDER MOBILE 1 -->
         <div class="slider-mobile">
             <ip-slider-sl-1
-                    slide-title='Au service<br/> de nos<br/> <span>collaborateurs</span>'
-                    slide-title-mobile='Au service de <br/>nos <span>collaborateurs</span>',
-                    slides='[
-                {"imgPath": "../assets/images/slide-1-1.png", "link": "#", "title": "Renforcer l&apos;engagement collectif avec I say 2.0"},
-                {"imgPath": "../assets/images/slide-1-2.png", "link": "#", "title": "Préparer nos collaborateurs pour l&apos;avenir"}
-            ]'>
+                    data-i18n="slider.slide-1.title slider.slide-1.title-mobile slider.slide-1.btn-next-aria slider.slide-1.btn-previous-aria slider.slide-1.title-aria slider.slide-1.slides"
+                    data-i18n-attr="slide-title slide-title-mobile btn-next-aria btn-previous-aria slide-title-aria slides"
+                    slide-title=''
+                    slide-title-mobile='',
+                    btn-next-aria='',
+                    btn-previous-aria='',
+                    slide-title-aria='',
+                    slides=''>
             </ip-slider-sl-1>
         </div>
 
@@ -60,21 +62,21 @@
         <div class="ip-panel panel panel-reverse">
 
             <div class="panel__desc">
-                <h3 class="panel__desc__title">
-                    Au service<br/> <span>de la planète</span>
+                <h3 class="panel__desc__title" aria-hidden="true" data-i18n="slider.slide-2.title">
                 </h3>
+                <span class="sr-only" data-i18n="slider.slide-2.title-aria"></span>
             </div>
             <div class="panel__items">
                 <ul class="panel__items__ul">
                     <li class="panel__li">
-                        <a class='panel__li__link' href="#">
+                        <a class='panel__li__link' href="#" aria-label="Préserver nos terroirs en prenant soin de nos racines">
                             <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-2-1.png');"></div>
                             <span class='panel__li__overlay'></span>
                             <span class='panel__li__desc'>Préserver nos terroirs en prenant soin de nos racines</span>
                         </a>
                     </li>
                     <li class="panel__li">
-                        <a class='panel__li__link' href="#">
+                        <a class='panel__li__link' href="#" aria-label="Investir dans un avenir plus circulaire">
                             <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-2-2.png');"></div>
                             <span class='panel__li__overlay'></span>
                             <span class='panel__li__desc'>Investir dans un avenir plus circulaire</span>
@@ -87,31 +89,29 @@
 
         <!-- SLIDER MOBILE 2 -->
         <div class="slider-mobile">
-              <!-- Slider Desktop -->
               <ip-slider-sl-1
-                      slide-title='Au service<br/> <span>de la planète</span>'
-                      slide-title-mobile='Au service de <br/><span>la planète</span>',
-                      slides='[
-                    {"imgPath": "../assets/images/slide-2-1.png", "link": "#", "title": "Préserver nos terroirs en prenant soin de nos racines"},
-                    {"imgPath": "../assets/images/slide-2-2.png", "link": "#", "title": "Investir dans un avenir plus circulaire"}
-                ]'>
+                      data-i18n="slider.slide-2.title slider.slide-2.title-mobile slider.slide-2.btn-next-aria slider.slide-2.btn-previous-aria slider.slide-2.title-aria slider.slide-2.slides"
+                      data-i18n-attr="slide-title slide-title-mobile btn-next-aria btn-previous-aria slide-title-aria slides"
+                      slide-title=''
+                      slide-title-mobile='',
+                      btn-next-aria='',
+                      btn-previous-aria='',
+                      slide-title-aria='',
+                      slides=''>
               </ip-slider-sl-1>
           </div>
 
         <!-- Slider Desktop -->
         <div class="slider-desktop">
             <ip-slider-sl-1
-                    slide-title='Au service<br/> de nos <br/><span>consommateurs</span>'
-                    slide-title-mobile='Au service de<br/><span>nos consommateurs</span>',
-                    btn-next-aria='Previous Slide',
-                    btn-previous-aria='Next Slide',
-                    slides='[
-                {"imgPath": "../assets/images/slide-3-1.png", "link": "#", "title": "Martell prend son envol au Nigeria"},
-                {"imgPath": "../assets/images/slide-3-2.png", "link": "#", "title": "Pour une croissance de nos marques de Whiskey aux États-Unis"},
-                {"imgPath": "../assets/images/slide-3-3.png", "link": "#", "title": "Un apéritif, mais pas que"},
-                {"imgPath": "../assets/images/slide-3-4.png", "link": "#", "title": "Un amour Absolu[t]"},
-                {"imgPath": "../assets/images/slide-3-5.png", "link": "#", "title": "Le digital au service de la consommation responsable"}
-            ]'>
+                    data-i18n="slider.slide-3.title slider.slide-3.title-mobile slider.slide-3.btn-next-aria slider.slide-3.btn-previous-aria slider.slide-3.title-aria slider.slide-3.slides"
+                    data-i18n-attr="slide-title slide-title-mobile btn-next-aria btn-previous-aria slide-title-aria slides"
+                    slide-title=''
+                    slide-title-mobile='',
+                    btn-next-aria='',
+                    btn-previous-aria='',
+                    slide-title-aria=''
+                    slides=''>
             </ip-slider-sl-1>
         </div>
 
@@ -119,21 +119,21 @@
         <div class="ip-panel panel panel-reverse">
 
           <div class="panel__desc">
-              <h3 class="panel__desc__title">
-                  Au service<br/> <span>de l'art</span>
+              <h3 class="panel__desc__title" aria-hidden="true" data-i18n="slider.slide-4.title">
               </h3>
+              <span class="sr-only" data-i18n="slider.slide-4.title-aria">Au service de l'art</span>
           </div>
           <div class="panel__items">
               <ul class="panel__items__ul">
                   <li class="panel__li">
-                      <a class='panel__li__link' href="#">
+                      <a class='panel__li__link' href="#" aria-label="Le programme de mentorat artistique">
                           <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-4-1.png');"></div>
                           <span class='panel__li__overlay'></span>
                           <span class='panel__li__desc'>Le programme de mentorat artistique</span>
                       </a>
                   </li>
                   <li class="panel__li">
-                      <a class='panel__li__link' href="#">
+                      <a class='panel__li__link' href="#" aria-label="La Fondation d'entreprise Pernod Ricard">
                           <div class= 'panel__li__bg-img' style="background-image: url('../assets/images/slide-4-2.png');"></div>
                           <span class='panel__li__overlay'></span>
                           <span class='panel__li__desc'>La Fondation d'entreprise Pernod Ricard</span>
@@ -146,14 +146,15 @@
 
         <!-- SLIDER MOBILE 3 -->
         <div class="slider-mobile">
-          <!-- Slider Desktop -->
           <ip-slider-sl-1
-                  slide-title='Au service<br/> <span>de l&apos;art</span>>'
-                  slide-title-mobile='Au service<br/> <span>de l&apos;art</span>',
-                  slides='[
-                    {"imgPath": "../assets/images/slide-4-1.png", "link": "#", "title": "Le programme de mentorat artistique"},
-                    {"imgPath": "../assets/images/slide-4-2.png", "link": "#", "title": "La Fondation d&apos;entreprise Pernod Ricard"}
-                ]'>
+                  data-i18n="slider.slide-4.title slider.slide-4.title-mobile slider.slide-4.btn-next-aria slider.slide-4.btn-previous-aria slider.slide-4.title-aria slider.slide-4.slides"
+                  data-i18n-attr="slide-title slide-title-mobile btn-next-aria btn-previous-aria slide-title-aria slides"
+                  slide-title=''
+                  slide-title-mobile='',
+                  btn-next-aria='',
+                  btn-previous-aria='',
+                  slide-title-aria='',
+                  slides=''>
           </ip-slider-sl-1>
       </div>
 

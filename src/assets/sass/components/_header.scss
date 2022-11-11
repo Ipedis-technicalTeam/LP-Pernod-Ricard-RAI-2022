@@ -1,9 +1,9 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
 
 main {
   @media #{$ps-tablet} {
-      overflow-x: hidden;
+    overflow-x: hidden;
   }
 }
 
@@ -86,7 +86,6 @@ header {
         top: -40px;
       }
 
-
       h1 {
         color: $lightColor;
         font-family: $Choplin-SemiBold;
@@ -150,7 +149,6 @@ header {
           top: unset;
           bottom: 0;
         }
-        
       }
     }
   }

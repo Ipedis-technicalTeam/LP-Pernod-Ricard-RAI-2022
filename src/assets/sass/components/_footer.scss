@@ -1,5 +1,5 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
 
 footer {
   .container {
@@ -22,7 +22,7 @@ footer {
       .logo {
         width: 300px;
         height: auto;
-  
+
         @media #{$ps-mobile} {
           width: 250px;
         }
@@ -50,7 +50,6 @@ footer {
         }
 
         &__item {
-
           @media #{$ps-mobile} {
             width: 100%;
           }
@@ -85,8 +84,10 @@ footer {
           }
 
           .read {
+            text-decoration: underline 2px $lightColor;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               color: $lightColor;
               background-color: $tropazBlue;
             }
@@ -95,8 +96,10 @@ footer {
           .download {
             color: $lightColor;
             background-color: $tropazBlue;
+            text-decoration: underline 2px $tropazBlue;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               color: $tropazBlue;
               background-color: transparent;
             }
@@ -141,7 +144,6 @@ footer {
           @media #{$ps-mobile} {
             font-size: 12px;
           }
-
         }
       }
 
@@ -159,7 +161,7 @@ footer {
           }
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 0;
             height: 2px;
@@ -167,15 +169,16 @@ footer {
             bottom: -3px;
             right: 0;
             background: $tropazBlue;
-            transition: width .5s ease;
-            -webkit-transition: width .5s ease;
+            transition: width 0.5s ease;
+            -webkit-transition: width 0.5s ease;
           }
 
-          &:hover, &:focus {
-              &::after {
-                  width: 100%;
-                  left: 0;
-              }
+          &:hover,
+          &:focus {
+            &::after {
+              width: 100%;
+              left: 0;
+            }
           }
         }
       }

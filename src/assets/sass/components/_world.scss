@@ -1,47 +1,110 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
 
 .world {
-    margin-bottom: 130px;
-    .container {
-        display: flex;
+  margin-bottom: 130px;
 
-        .left {
-            width: 55vw;
-            margin-top: 115px;
-            background-image: url('..//images/world-bg.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
+  @media #{$ps-tablet} {
+    margin-bottom: 80px;
+  }
 
-            img {
-                height: 70%;
-            }
-        }
+  @media #{$ps-mobile} {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
 
-        .right {
-            width: 45vw;
-            background-color: $secondaryColor;
-            margin-bottom: 200px;
-            padding: 160px 80px 100px 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
+  .container {
+    display: flex;
 
-            .heading {
-                color: $lightColor;
-                font-size: 80px;
-                line-height: 1.1;
-                text-align: left;
-
-                .light {
-                    font-family: $Graphik-Light;
-                }
-            }
-        }
+    @media #{$ps-tablet} {
+      background-image: url("..//images/world-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
     }
+
+    @media #{$ps-mobile} {
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .left {
+      width: 55vw;
+      margin-top: 115px;
+      background-image: url("..//images/world-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      @media #{$ps-tablet} {
+        width: 40vw;
+        background-image: none;
+        margin-top: 0;
+      }
+
+      img {
+        height: 70%;
+
+        @media #{$ps-tablet} {
+          width: 100%;
+          height: auto;
+        }
+
+        @media #{$ps-mobile} {
+          margin-bottom: -40px;
+        }
+      }
+    }
+
+    .right {
+      width: 45vw;
+      background-color: $secondaryColor;
+      margin-bottom: 200px;
+      padding: 160px 80px 100px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @media only screen and (min-width: 1280px) and (max-width: 1919px) {
+        padding: 160px 60px 100px 2vw;
+      }
+
+      @media #{$ps-tablet} {
+        width: 60vw;
+        padding: 80px 40px 40px 40px;
+        height: fit-content;
+      }
+
+      @media #{$ps-mobile} {
+        padding: 60px 20px 20px 20px;
+        margin-top: -20px;
+        margin-bottom: 0;
+      }
+
+      .heading {
+        color: $lightColor;
+        font-family: $Choplin-SemiBold;
+        font-size: clamp(1.825rem, 8vw, 5rem);
+        line-height: 1.1;
+        text-align: left;
+        padding-bottom: 250px;
+
+        @media #{$ps-tablet} {
+          padding-bottom: 180px;
+        }
+
+        @media #{$ps-mobile} {
+          padding-bottom: 100px;
+        }
+
+        .light {
+          font-family: $Graphik-Light;
+        }
+      }
+    }
+  }
 }

@@ -1,11 +1,17 @@
-@use '../theme' as *;
-@use '../utilities' as *;
+@use "../theme" as *;
+@use "../utilities" as *;
+
+main {
+  @media #{$ps-tablet} {
+    overflow-x: hidden;
+  }
+}
 
 header {
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 
   @media #{$ps-tablet} {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
   }
 
   @media #{$ps-mobile} {
@@ -19,16 +25,31 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding-top: 100px;
-    padding-bottom: 300px;
     display: flex;
     position: relative;
 
+    @media only screen and (min-width: 1366px) {
+      min-height: 900px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      min-height: auto;
+      padding-bottom: 140px;
+    }
+
+    @media only screen and (min-width: 1645px) {
+      min-height: auto;
+      padding-bottom: 180px;
+    }
+
+    @media only screen and (min-width: 1645px) {
+      min-height: 1200px;
+    }
 
     @media #{$ps-tablet} {
       min-height: auto;
       padding-top: 0;
-      padding-bottom: 0;
+      padding-bottom: 35px;
     }
 
     @media #{$ps-tablet-landscape} {
@@ -38,6 +59,7 @@ header {
     @media #{$ps-mobile} {
       min-height: 400px;
       justify-content: flex-end;
+      padding-bottom: 0;
     }
 
     .headerHeadline {
@@ -48,11 +70,13 @@ header {
       justify-content: center;
       padding: 140px 50px 70px 10vw;
       width: 60vw;
+      margin-top: 100px;
       height: fit-content;
 
       @media #{$ps-tablet} {
         width: 55vw;
         padding: 70px 35px 40px 3vw;
+        margin-top: 0;
       }
 
       @media #{$ps-mobile} {
@@ -61,7 +85,6 @@ header {
         left: 0;
         top: -40px;
       }
-
 
       h1 {
         color: $lightColor;
@@ -126,7 +149,6 @@ header {
           top: unset;
           bottom: 0;
         }
-        
       }
     }
   }

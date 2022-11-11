@@ -20,13 +20,68 @@
     "list-lang": "English version"
   },
 
-  "header": {
-  },
+  "header": {},
 
   "main": {
+    "brands": {
+      "link": "#",
+
+      "alt": "Découvrir nos marques",
+
+      "img": {
+        "desktop": {
+          "underline": "assets/images/brand/surlignage.png",
+          "title": "assets/images/brand/titre.png",
+          "bottles": "assets/images/brand/nosmarques.png",
+          "alt": "Nos Marques"
+        },
+
+        "mobile": {
+          "underline": "assets/images/brand/surlignage.png",
+          "title": "assets/images/brand/titreFRmobile.png",
+          "bottles": "assets/images/brand/bouteillesmobile.png",
+          "alt": "Nos Marques"
+        }
+      }
+    }
   },
 
   "footer": {
     "heading": "French Footer"
+  },
+
+  "slider": {
+    "slide-1": {
+      "title": "Au service<br/> de nos<br/> <span>collaborateurs</span>",
+      "title-mobile": "Au service de <br/>nos <span>collaborateurs</span>",
+      "btn-next-aria": "Previous Slide",
+      "btn-previous-aria": "Next Slide",
+      "title-aria": "Au service de nos collaborateurs",
+      "slides": "[{\"imgPath\": \"../assets/images/slide-1-1.png\", \"link\": \"#\", \"title\": \"Renforcer l'engagement collectif avec I say 2.0\"}, {\"imgPath\": \"../assets/images/slide-1-2.png\", \"link\": \"#\", \"title\": \"Préparer nos collaborateurs pour l'avenir\"}]"
+    },
+    "slide-2": {
+      "title": "Au service<br/> <span>de la planète</span>",
+      "title-mobile": "Au service de <br/><span>la planète</span>",
+      "btn-next-aria": "Previous Slide",
+      "btn-previous-aria": "Next Slide",
+      "title-aria": "Au service de la planète",
+      "slides": "[{\"imgPath\": \"../assets/images/slide-2-1.png\", \"link\": \"#\", \"title\": \"Préserver nos terroirs en prenant soin de nos racines\"}, {\"imgPath\": \"../assets/images/slide-2-2.png\", \"link\": \"#\", \"title\": \"Investir dans un avenir plus circulaire\"}]"
+    },
+    "slide-3": {
+      "title": "Au service<br/> de nos <br/><span>consommateurs</span>",
+      "title-mobile": "Au service de<br/><span>nos consommateurs</span>",
+      "btn-next-aria": "Previous Slide",
+      "btn-previous-aria": "Next Slide",
+      "title-aria": "Au service de nos consommateurs",
+      "slides": "[{\"imgPath\": \"../assets/images/slide-3-1.png\", \"link\": \"#\", \"title\": \"Martell prend son envol au Nigeria\"},{\"imgPath\": \"../assets/images/slide-3-2.png\", \"link\": \"#\", \"title\": \"Pour une croissance de nos marques de Whiskey aux États-Unis\"},{\"imgPath\": \"../assets/images/slide-3-3.png\", \"link\": \"#\", \"title\": \"Un apéritif, mais pas que\"},{\"imgPath\": \"../assets/images/slide-3-4.png\", \"link\": \"#\", \"title\": \"Un amour Absolu[t]\"},{\"imgPath\": \"../assets/images/slide-3-5.png\", \"link\": \"#\", \"title\": \"Le digital au service de la consommation responsable\"}]"
+    },
+    "slide-4": {
+      "title": "Au service<br/> <span>de l'art</span>",
+      "title-mobile": "Au service<br/> <span>de l'art</span>",
+      "btn-next-aria": "Previous Slide",
+      "btn-previous-aria": "Next Slide",
+      "title-aria": "Au service de l'art",
+      "slides": "[{\"imgPath\": \"../assets/images/slide-4-1.png\", \"link\": \"#\", \"title\": \"Le programme de mentorat artistique\"},{\"imgPath\": \"../assets/images/slide-4-2.png\", \"link\": \"#\", \"title\": \"La Fondation d&apos;entreprise Pernod Ricard\"}]"
+    }
   }
 }

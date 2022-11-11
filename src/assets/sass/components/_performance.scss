@@ -1,23 +1,23 @@
 @use "../theme" as *;
 @use "../utilities" as *;
 
-.world {
-  margin-bottom: 130px;
+.performance {
+  margin-top: 160px;
 
   @media #{$ps-tablet} {
-    margin-bottom: 80px;
+    margin-top: 80px;
   }
 
   @media #{$ps-mobile} {
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .container {
     display: flex;
 
     @media #{$ps-tablet} {
-      background-image: url("..//images/world-bg.png");
+      background-image: url("..//images/performance-bg.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
@@ -31,7 +31,7 @@
     .left {
       width: 55vw;
       margin-top: 115px;
-      background-image: url("..//images/world-bg.png");
+      background-image: url("..//images/performance-bg.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
@@ -61,7 +61,7 @@
 
     .right {
       width: 45vw;
-      background-color: $secondaryColor;
+      background-color: $quartenaryColor;
       margin-bottom: 200px;
       padding: 160px 80px 100px 80px;
       display: flex;
@@ -103,6 +103,53 @@
 
         .light {
           font-family: $Graphik-Light;
+        }
+      }
+
+      &__list {
+        @media #{$ps-mobile} {
+          width: 65%;
+        }
+
+        &__item {
+          text-align: left;
+
+          &:not(:last-child) {
+            padding-bottom: 40px;
+
+            @media #{$ps-mobile} {
+              padding-bottom: 15px;
+            }
+          }
+
+          &-link {
+            color: $lightColor;
+            font-family: $Graphik-Medium;
+            font-size: clamp(0.75rem, 2vw, 1.25rem);
+            text-transform: uppercase;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 2px;
+              display: block;
+              margin-top: 5px;
+              right: 0;
+              background: $lightColor;
+              transition: width 0.5s ease;
+              -webkit-transition: width 0.5s ease;
+            }
+
+            &:hover,
+            &:focus {
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
         }
       }
     }

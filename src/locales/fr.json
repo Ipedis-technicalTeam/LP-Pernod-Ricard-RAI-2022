@@ -12,20 +12,38 @@
   },
 
   "head": {
-    "title": "Pernod Ricard"
+    "title": "Pernod Ricard - Rapport Annuel Intégré 2021/22"
   },
 
   "navigation": {
-    "heading": "French Navigation",
-    "btn": "Switch to En"
+    "list": "Choisir votre langue, Français ou anglais",
+    "list-lang": "English version"
   },
 
-  "header": {
-    "heading": "French Header"
-  },
+  "header": {},
 
   "main": {
-    "heading": "French Main"
+    "brands": {
+      "link": "#",
+
+      "alt": "Découvrir nos marques",
+
+      "img": {
+        "desktop": {
+          "underline": "assets/images/brand/surlignage.png",
+          "title": "assets/images/brand/titre.png",
+          "bottles": "assets/images/brand/nosmarques.png",
+          "alt": "Nos Marques"
+        },
+
+        "mobile": {
+          "underline": "assets/images/brand/surlignage.png",
+          "title": "assets/images/brand/titreFRmobile.png",
+          "bottles": "assets/images/brand/bouteillesmobile.png",
+          "alt": "Nos Marques"
+        }
+      }
+    }
   },
 
   "footer": {

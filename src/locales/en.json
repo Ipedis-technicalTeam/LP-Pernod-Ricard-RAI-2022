@@ -65,5 +65,13 @@
       "title-aria": "Au service de l'art",
       "slides": "[{\"imgPath\": \"../assets/images/slide-4-1.png\", \"link\": \"#\", \"title\": \"Le programme de mentorat artistique\"},{\"imgPath\": \"../assets/images/slide-4-2.png\", \"link\": \"#\", \"title\": \"La Fondation d&apos;entreprise Pernod Ricard\"}]"
     }
+  },
+
+  "cookies": {
+    "labelledby": "Confidentiality Preferences",
+    "close": "Close",
+    "desc": "We use cookies that are strictly necessary for the operation of this website as well as statistical cookies that allow us to anonymously know how users interact with the website in order to optimize your user experience.<br/>These cookies can be set at any time from the publication.",
+    "refuse": "Refuse",
+    "accept": "Accept"
   }
 }

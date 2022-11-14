@@ -1,12 +1,6 @@
 @use "../theme" as *;
 @use "../utilities" as *;
 
-main {
-  @media #{$ps-tablet} {
-    overflow-x: hidden;
-  }
-}
-
 header {
   margin-bottom: 100px;
 
@@ -28,23 +22,23 @@ header {
     display: flex;
     position: relative;
 
-    @media only screen and (min-width: 1366px) {
-      min-height: 900px;
-    }
+    // @media only screen and (min-width: 1366px) {
+    //   min-height: 900px;
+    // }
 
-    @media only screen and (min-width: 1440px) {
-      min-height: auto;
-      padding-bottom: 140px;
-    }
+    // @media only screen and (min-width: 1440px) {
+    //   min-height: auto;
+    //   padding-bottom: 140px;
+    // }
 
-    @media only screen and (min-width: 1645px) {
-      min-height: auto;
-      padding-bottom: 180px;
-    }
+    // @media only screen and (min-width: 1645px) {
+    //   min-height: auto;
+    //   padding-bottom: 180px;
+    // }
 
-    @media only screen and (min-width: 1645px) {
-      min-height: 1200px;
-    }
+    // @media only screen and (min-width: 1645px) {
+    //   min-height: 1200px;
+    // }
 
     @media #{$ps-tablet} {
       min-height: auto;
@@ -53,13 +47,12 @@ header {
     }
 
     @media #{$ps-tablet-landscape} {
-      padding-bottom: 120px;
+      padding-bottom: 0px;
     }
 
     @media #{$ps-mobile} {
-      min-height: 400px;
       justify-content: flex-end;
-      padding-bottom: 0;
+      padding-bottom: 20px;
     }
 
     .headerHeadline {
@@ -81,9 +74,7 @@ header {
 
       @media #{$ps-mobile} {
         padding: 40px 30px 40px 3vw;
-        position: absolute;
-        left: 0;
-        top: -40px;
+        margin-top: -40px;
       }
 
       h1 {
@@ -129,25 +120,28 @@ header {
       width: 40vw;
       position: relative;
       display: flex;
+      padding-top: 200px;
 
       @media #{$ps-tablet} {
         width: 45vw;
+        padding-top: 0;
+        margin-top: 90px;
+      }
+
+      @media #{$ps-mobile} {
+        padding-top: 50px;
       }
 
       img {
         width: 100%;
         height: auto;
-        position: absolute;
-        right: 0;
-        top: 200px;
+        margin-bottom: -80px;
 
         @media #{$ps-tablet} {
-          top: 150px;
+          margin-bottom: -35px;
         }
 
         @media #{$ps-mobile} {
-          top: unset;
-          bottom: 0;
         }
       }
     }

@@ -2,11 +2,7 @@
 @use "../utilities" as *;
 
 .performance {
-  margin-top: 160px;
-
-  @media #{$ps-tablet} {
-    margin-top: 80px;
-  }
+  margin-top: 80px;
 
   @media #{$ps-mobile} {
     margin-top: 30px;
@@ -140,6 +136,15 @@
               background: $lightColor;
               transition: width 0.5s ease;
               -webkit-transition: width 0.5s ease;
+
+              @media #{$ps-tablet} {
+                width: 100%;
+                left: 0;
+              }
+
+              @media #{$ps-mobile} {
+                height: 1px;
+              }
             }
 
             &:hover,

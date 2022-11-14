@@ -24,8 +24,12 @@
       min-height: 705px;
     }
 
+    @media #{$ps-tablet-landscape} {
+      min-height: 705px;
+    }
+
     @media #{$ps-mobile} {
-      min-height: 350px;
+      min-height: 500px;
     }
 
     .left {

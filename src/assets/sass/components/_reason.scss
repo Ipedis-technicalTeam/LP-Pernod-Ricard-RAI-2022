@@ -109,6 +109,15 @@
               background: $lightColor;
               transition: width 0.5s ease;
               -webkit-transition: width 0.5s ease;
+
+              @media #{$ps-tablet} {
+                width: 100%;
+                left: 0;
+              }
+
+              @media #{$ps-mobile} {
+                height: 1px;
+              }
             }
 
             &:hover,

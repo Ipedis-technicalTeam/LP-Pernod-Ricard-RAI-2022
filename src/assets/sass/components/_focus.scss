@@ -167,6 +167,14 @@
           &:focus {
             background-size: 100% 2px;
           }
+
+          @media #{$ps-tablet} {
+            background-size: 100% 2px;
+          }
+
+          @media #{$ps-mobile} {
+            background-size: 100% 1px;
+          }
         }
       }
     }

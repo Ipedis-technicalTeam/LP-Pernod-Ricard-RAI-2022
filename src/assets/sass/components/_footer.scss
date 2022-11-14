@@ -111,6 +111,7 @@ footer {
     .info {
       display: flex;
       align-items: center;
+      justify-content: center;
 
       @media #{$ps-mobile} {
         width: 100%;

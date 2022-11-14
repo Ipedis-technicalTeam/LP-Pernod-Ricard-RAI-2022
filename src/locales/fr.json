@@ -12,15 +12,17 @@
   },
 
   "head": {
-    "title": "Pernod Ricard - Rapport Annuel Intégré 2021/22"
+    "title": "Pernod Ricard"
   },
 
   "navigation": {
-    "list": "Choisir votre langue, Français ou anglais",
-    "list-lang": "English version"
+    "heading": "French Navigation",
+    "btn": "Switch to En"
   },
 
-  "header": {},
+  "header": {
+    "heading": "French Header"
+  },
 
   "main": {
     "brands": {

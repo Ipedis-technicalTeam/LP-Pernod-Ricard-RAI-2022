@@ -9,7 +9,7 @@
   }
 
   @media #{$ps-mobile} {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .container {
@@ -70,6 +70,7 @@
       padding-bottom: 100px;
       padding-right: 100px;
       width: 33.33%;
+      z-index: 2;
 
       .role {
         display: none;
@@ -145,19 +146,12 @@
           .light {
             font-family: $Graphik-Light;
           }
-
-          .underline {
-            position: relative;
-            text-decoration: underline;
-          }
         }
 
         .readMore {
           color: $black;
           text-transform: uppercase;
           font-family: $Graphik-Medium;
-          font-size: 25px;
-
           font-size: clamp(1.125rem, 3vw, 1.5625rem);
           width: fit-content;
           position: relative;
@@ -173,6 +167,15 @@
             background: $black;
             transition: width 0.5s ease;
             -webkit-transition: width 0.5s ease;
+
+            @media #{$ps-tablet} {
+              width: 100%;
+              left: 0;
+            }
+
+            @media #{$ps-mobile} {
+              height: 1px;
+            }
           }
 
           &:hover,

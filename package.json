@@ -18,8 +18,10 @@
   "license": "ISC",
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4",
+    "aos": "^2.3.4",
     "ip-d14-slider": "^0.0.8",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "simple-parallax-js": "^5.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",

@@ -1,0 +1,20 @@
+@use "../theme" as *;
+@use "../utilities" as *;
+
+.underline {
+  display: inline-block;
+  width: fit-content;
+
+    img {
+        width: fit-content;
+    }
+}
+
+/* underline animation on scroll */
+[data-aos="animate-slide-in"] {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  
+  [data-aos="animate-slide-in"].aos-animate {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
